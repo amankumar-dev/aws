@@ -9,5 +9,23 @@ Create Bucket -> curl -X PUT "http://localhost:4566/first-bucket"
 Remove Bucket -> awslocal s3 rb s3://first-bucket
 Upload CSV -> curl -X PUT -H "Content-Type:text/csv" --data-binary "@users.csv" "http://localhost:4566/first-bucket/users.csv"
 Verify Upload -> curl -X GET "http://localhost:4566/first-bucket/users.csv" (Read Content) OR curl -X GET "http://localhost:4566/first-bucket (List bucket contents)
+Security -> Access Controls [Block Public Acces, IAM policies, Bucket Policies], Encryption [At Rest, In Transit], Data Protection [Bucket Versioning, Object Lock], Monitoring [Cloudtrail, Guard Duty]
+s3 Bucket Policy -> {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowPublicRead",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::my-bucket-name/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "192.168.1.0/24"
+        }
+      }
+    }
+  ]
+}
 
 
