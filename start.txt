@@ -27,5 +27,7 @@ s3 Bucket Policy -> {
     }
   ]
 }
-
+s3 Versioning: Uploading files(overwriting), Deleting files(Delete Markers)
+s3 Replication: Cross Region Replication, Same Region Replication, RTC
+s3 Storage Class: Standard(Daily Active Usage), Intelligent Tiering(Unpredictable), Standard IA(Mahine mai 1-2 baar), Onezone IA(Mahine mai 1-2 baar + Non critical data), Glacier Flexible(Backup data), Glacier Deep Archive(pta nhi kb chahiye)
 
