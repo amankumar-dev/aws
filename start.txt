@@ -1,15 +1,22 @@
 --CONTAINER--
 Create container -> docker run -d --name my-local-cloud -p 4566:4566 localstack/localstack:3.4.0
+
 Create awslocal variable -> doskey awslocal=aws --endpoint-url=http://localhost:4566 $*
+
 Check variable -> awslocal s3 ls
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --S3--
 Create Bucket -> curl -X PUT "http://localhost:4566/first-bucket"
+
 Remove Bucket -> awslocal s3 rb s3://first-bucket
+
 Upload CSV -> curl -X PUT -H "Content-Type:text/csv" --data-binary "@users.csv" "http://localhost:4566/first-bucket/users.csv"
+
 Verify Upload -> curl -X GET "http://localhost:4566/first-bucket/users.csv" (Read Content) OR curl -X GET "http://localhost:4566/first-bucket (List bucket contents)
+
 Security -> Access Controls [Block Public Acces, IAM policies, Bucket Policies], Encryption [At Rest, In Transit], Data Protection [Bucket Versioning, Object Lock], Monitoring [Cloudtrail, Guard Duty]
+
 s3 Bucket Policy -> {
   "Version": "2012-10-17",
   "Statement": [
@@ -27,7 +34,64 @@ s3 Bucket Policy -> {
     }
   ]
 }
+
 s3 Versioning: Uploading files(overwriting), Deleting files(Delete Markers)
+
 s3 Replication: Cross Region Replication, Same Region Replication, RTC
+
 s3 Storage Class: Standard(Daily Active Usage), Intelligent Tiering(Unpredictable), Standard IA(Mahine mai 1-2 baar), Onezone IA(Mahine mai 1-2 baar + Non critical data), Glacier Flexible(Backup data), Glacier Deep Archive(pta nhi kb chahiye)
+
+s3 Lifecycle: aws s3api put-bucket-lifecycle-configuration --bucket my-test-bucket --lifecycle-configuration file://lifecycle.json
+->set lifecycle policy:
+  {
+  "Rules": [
+    {
+      "ID": "Automated Backup Lifecycle Policy",
+      "Filter": {
+        "Prefix": ""
+      },
+      "Status": "Enabled",
+      "Transitions": [
+        {
+          "Days": 30,
+          "StorageClass": "STANDARD_IA"
+        },
+        {
+          "Days": 90,
+          "StorageClass": "GLACIER"
+        },
+        {
+          "Days": 180,
+          "StorageClass": "DEEP_ARCHIVE"
+        }
+      ],
+      "Expiration": {
+        "Days": 365
+      }
+    }
+  ]
+}
+-> Transitions Actions : Move file 
+-> Expiration Actions: Delete file
+
+s3 Event Notification: aws s3api put-bucket-notification-configuration --bucket my-test-bucket --notification-configuration file://notification.json --endpoint-url=http://localhost:4566
+-> set event notification policy:
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "Id": "TriggerImageProcessor",
+      "LambdaFunctionArn": "arn:aws:lambda:us-east-1:000000000000:function:resize-image",
+      "Events": ["s3:ObjectCreated:*"],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            { "Name": "prefix", "Value": "uploads/" },
+            { "Name": "suffix", "Value": ".png" }
+          ]
+        }
+      }
+    }
+  ]
+}
+-> Target (Supported Destination): Lambda, SQS, SNS, EventBridge
 
