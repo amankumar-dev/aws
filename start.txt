@@ -95,3 +95,9 @@ s3 Event Notification: aws s3api put-bucket-notification-configuration --bucket 
 }
 -> Target (Supported Destination): Lambda, SQS, SNS, EventBridge
 
+s3 Performance: Baseline Performance(Prefix depend speed), Multipart upload, Byte-range fetches, Cloudfront caches, Transfer Acceleration
+
+s3 Encryption: Encryption in Transit (aws:SecureTransport:False), Encryption at Rest(SSE, CSE)(Data key, Master key)
+
+s3 Access Point: aws s3control put-access-point-policy --account-id 123456789012 --name finance-ap --policy file://finance-policy.json
+
