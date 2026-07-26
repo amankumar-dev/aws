@@ -101,3 +101,20 @@ s3 Encryption: Encryption in Transit (aws:SecureTransport:False), Encryption at 
 
 s3 Access Point: aws s3control put-access-point-policy --account-id 123456789012 --name finance-ap --policy file://finance-policy.json
 
+s3 Tables: Apache Iceberg, Glue/Athena
+-> Table Bucket: aws s3tables create-table-bucket --name my-table-bucket --region us-east-1
+
+s3 Storage Lens: Dashboard
+
+Amazon EBS: Elastic Block Store, Virtual Hard Drive for EC2
+-> Data Persistent(Data doesn't disappear when server stops)
+-> OS Boot Drives(Store Operating System)
+-> High Performance for DB
+-> Snapshot & Backup (Took point in time EBS snapshot that are saved to s3)
+-> Elasticity (20gb - 200gb, HDD - SSD without turning off server) 
+
+Amazon EFS: Elastic File System, NFS
+
+Amazon Backup: Centralized Backup
+-> Multiservice                                 -> Disaster recovery(Cross region copy)
+-> Ransome Protection(Vault Lock)
