@@ -118,3 +118,21 @@ Amazon EFS: Elastic File System, NFS
 Amazon Backup: Centralized Backup
 -> Multiservice                                 -> Disaster recovery(Cross region copy)
 -> Ransome Protection(Vault Lock)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--DYNAMODB--
+
+Amazon DynamoDB: NoSQL DB, Key-Value Data, JSON structure
+->Read/Write Capacity Modes (RRU=upto 4kb/WRU=upto 1kb)
+-> On Demand Mode(Automatic scaling, Billing depend on RRU/GRU)
+-> Provisioned Mode(We defined read/write unit)
+
+DynamoDB Indexes: Create Secondary Copy
+-> Local Secondary Index(LSI): Partition Key same but New Sort Key
+-> Global Secondary Index(GSI): Both Partition and Sort key new
+
+DynamoDB PartiQL: SQL support for CRUD
+
+DynamoDB Accelerator(DAX): In-memory Cache
+
