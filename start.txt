@@ -136,3 +136,35 @@ DynamoDB PartiQL: SQL support for CRUD
 
 DynamoDB Accelerator(DAX): In-memory Cache
 
+DynamoDB Streams: Change occur trigger notification/event
+-> keys_only(modified item's primary key)                   -> old_image(old item)
+-> new_image(modified item)                                 -> new_and_old_image(new and old item)
+
+DynamoDB TTL: Delete expired data
+-> Epoc Timestamp(in Seconds)                       -> Automatic Deletion(within 48 hrs)
+-> Background Scanner
+
+DynamoDB with S3 Patterns: Combination power of s3 and DynamoDB
+-> Large Item/Offboarding Bypass(400 kb limit)            -> Direct Bulk Import/Export(import from s3 and export to s3)
+-> Cold Storage Data Archiving(TTL+s3)
+
+DynamoDB Security: Security for Data
+-> Authentication(who access)                   -> Encryption(Data Protection)
+-> Authorization(what access)                   -> Network Protection(VPC Private AWS Internet)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--RDS--
+
+Amazon RDS: Setting up, Operating and Scaling relational database
+-> Multi AZ Deployment                                        -> Read Replicas
+-> Automated Backups & Point in time restore
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--AURORA--
+
+Amazon Aurora: Relational DB engine by aws
+-> Compatibility(Mysql and PostgreSQL)                                  -> Shared Storage
+-> Speed(5x and 3x)                                                     -> Log is the DB(Redo Logs)
+
