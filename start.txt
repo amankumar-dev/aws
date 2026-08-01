@@ -224,3 +224,19 @@ VACUUM: Redshift's Maintainance/Cleanup Tool
 RA3 Nodes: Feature to make achitect Decoupled(Storage and compute different)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--MIGRATION AND TRANSFER--
+
+Application Discovery Service: Analysis report of servers
+-> Collect data in two types: Agentless Discovery(VMs), Agent based Discovery(Agent Software)
+-> Utilise Collected data: Dependency Mapping(Visual map of connection), Cost Estimation(Costing on the basis of Performance metrics)
+
+Data Migration Service: Operational DB to AWS Cloud
+-> Zero Downtime: Full load - Ongoing Replication - Cutover
+-> Migration Types: Homogenous Migration(PostgreSQL to Aurora PostgreSQL, same engine), Hetrogenous Migration(Oracle to Aurora PostgreSQL, different engine)
+
+AWS Snowball: Physical Hard Drive which got delivered then upload and then sent to AWS Center
+-> Members of Snowball Family: AWS Snowcome(8TB), AWS Snowball Edge(80TB to 210TB), AWS Snowmobile(100PB)
+
+AWS Data Exchange: Third party Data, like Kaggle
+
