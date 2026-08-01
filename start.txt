@@ -204,4 +204,23 @@ Amazon Timestream: Time series DB, Only append, 1-2 days data(RAM) rest in (Disk
 
 Amazon Redshift: Columnar Storage, MPP Architecture(Single Leader node, Multiple Compute Nodes), Cluster of Servers, OLAP not OLTP
 
+Redshift Spectrum: Use SQL on S3, Glue Data Catalog, Smart File Format (Apache Paraquet)
+
+Redshift Distribution Styles: Leader node, Compute Nodes
+-> Even Distribution: Equally distributed
+-> Key Distribution: cust101 complete data in node1
+-> All Distribution: Copy of data for each node
+-> Auto Distribution: All and Even according to data size
+
+WLM: Redshift Workload Management, Traffic Controller, Divide query in queues
+-> Memory Allocation: We decide, size needed for which type of query
+-> Auto WLM: Redshift use ML/AI, Allocate memory ont the basis of priority
+-> SQA: Short Query Acceleration: Automatically execute short queries first
+
+VACUUM: Redshift's Maintainance/Cleanup Tool
+-> Reclaim Disk Space: Deleted marked rows permanently
+-> Re Sort Rows: Unsorted rows get sorted by SORT KEY
+
+RA3 Nodes: Feature to make achitect Decoupled(Storage and compute different)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
