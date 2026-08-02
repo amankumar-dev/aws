@@ -240,3 +240,20 @@ AWS Snowball: Physical Hard Drive which got delivered then upload and then sent 
 
 AWS Data Exchange: Third party Data, like Kaggle
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--COMPUTE--
+
+EC2: Elastic Compute Cloud, Big data computing, Distributed Computing, Specailized Hardware(NVMes, RAM), High speed inter node networking, Dynamic Elasticity
+-> Families of EC2: Storage optimized(D-series & I-series)[NVMes/SSDs/HDDs], Memory optimized(R-series & X-series)[Heavy RAM], Compute Optimized(C-series)[High CPU], Accelerated Computing(P-series & G-series)[AI/Deep learning models]
+
+AWS Graviton: AWS own ARM-based processor
+
+AWS Lambda: Function block, run code snippets in the cloud, 15 min max runtime
+-> Zero Server Management                   -> Automatic Scaling
+-> Pay per request(per ms)                  -> Event Driven Execution
+
+AWS SAM: CLI tool and utility, template.yaml, create serverless services
+
+AWS Batch: Same as lambda, more than 15 min runtime, query in queue, not instant processed
+
