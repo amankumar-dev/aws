@@ -257,3 +257,23 @@ AWS SAM: CLI tool and utility, template.yaml, create serverless services
 
 AWS Batch: Same as lambda, more than 15 min runtime, query in queue, not instant processed
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--CONTAINERS--
+
+Docker: create container, run container, manage container
+-> Dockerfile(Recipe/Instruction): Text file, Define how contianer will be created 
+-> Docker Image(Blueprint/Template): Dockerfile build, docker build, static file
+-> Docker Container: Docker image run, docker run, active living environment
+-> Docker Hub/Registry: Stored docker images, docker pull
+
+ECS: Multi container manager, 100-1000 containers of that image, restart when crash, auto scaling, load balancers.
+-> Task Definition(Blueprint): JSON file, tell how container run
+-> Task(Running Container): Actual active running container 
+-> Service(Manager): Defined no. of task should always run
+-> Cluster: EC2 and Capacity group
+
+ECR: Elastic Container Registry, Storage to store own docker image securely
+-> Security & Privacy           -> Super Fast Speed           -> Vulnerability Scanning
+
+EKS: ECS but for Kubernetes
