@@ -277,3 +277,26 @@ ECR: Elastic Container Registry, Storage to store own docker image securely
 -> Security & Privacy           -> Super Fast Speed           -> Vulnerability Scanning
 
 EKS: ECS but for Kubernetes
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--ANALYTICS--
+
+Glue: Serverless ETL Service
+-> Data Catalog: Metadata store, s3 files cols structures i.e. string, number...
+-> Glue Crawler: Automatic scan data, stored meta data to data Catalog
+-> Glue ETL Jobs: Use Apache Spark to transform tb/pb of data
+
+Glue Studio: GUI tool, Drag and drop diagram to perform ETL
+-> Visual Drag and Drop Editor: nodes creations and connections, flow chart like canvas
+-> Auto generated Code: Visual dig. Nodes then glue studio Automatically pyspark/spark sql code generation
+-> Job Monitoring/Visual Dashboard: All running/failed/succeeded glue jobs dashboard
+-> Interactive Data preview: live sample data view
+
+Glue Bookmark: Job processing tracking
+
+Glue Workflow: Ochestation tool, Join multiple crawler, jobs and triggers together, multiple end to end pipleline, like Airflow
+-> Triggers(Event/Scheduler): Schedulers Jobs and event triggers to run jobs
+-> Nodes(Actions): Actual components inside workflow like crawlers or glue jobs
+-> Workflow state and Parameters: Pass parameters from one job to another job
+
