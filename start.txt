@@ -300,3 +300,9 @@ Glue Workflow: Ochestation tool, Join multiple crawler, jobs and triggers togeth
 -> Nodes(Actions): Actual components inside workflow like crawlers or glue jobs
 -> Workflow state and Parameters: Pass parameters from one job to another job
 
+Aws Lake Formation: AWS service which setup data lake, secure, and manage faster
+-> Fine grained Access control: Table level access, column level access, row level access
+-> Tag based access control: On any tag we set true or false to lock the access
+-> Centralized blueprint data ingestion: pre-built Blueprints, MySQL, PostgreSQL, ya AWS RDS se data ko automated format me pull karke S3 Data Lake me load kar dete hain.
+
+AWS Athena: SQL on s3 data, No servers, zero ETL, pay per query, pricing and fast insights. ACID transactions need to do table type Apache Iceberg
