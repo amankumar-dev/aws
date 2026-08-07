@@ -306,3 +306,21 @@ Aws Lake Formation: AWS service which setup data lake, secure, and manage faster
 -> Centralized blueprint data ingestion: pre-built Blueprints, MySQL, PostgreSQL, ya AWS RDS se data ko automated format me pull karke S3 Data Lake me load kar dete hain.
 
 AWS Athena: SQL on s3 data, No servers, zero ETL, pay per query, pricing and fast insights. ACID transactions need to do table type Apache Iceberg
+
+Athena Federated Queries: One sql query to rule all databases
+
+EMR: Elastic Mapreduce, Create cluster of EC2 instances to use distributed engine spark, hive, hadoop, presto, Distribute work(Map) and combine all the work(Reduce)
+-> Master Node: Leader of cluster, distribute work, monitoring and manage coordination
+-> Core Node: Have both data storage and compute power in local disk
+-> Task Node: Only compute power not storage
+# It has deployment node:
+-> EMR on EC2: Khud fixed EC2 cluster create and manage krna
+-> EMR serverless: Sb AWS krta hai 
+-> EMR on EKS: Run cluster on Kubernetes
+
+# EC2: Virtual server i.e. ek server ke under chhotey chhotey VMs
+# VPC: Amazon private internet pr ek private network bubble, Virtual Private Cloud
+# S3: Storage box, Data lek is s3 but with some architecture.
+# CloudWatch: Monitoring, logging, and alerting tool
+# Cloudtrail: Auditing & Event history tool, account mai kisi user ya service ney kya action liya ushey track krta hai. 
+
