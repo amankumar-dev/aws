@@ -324,3 +324,6 @@ EMR: Elastic Mapreduce, Create cluster of EC2 instances to use distributed engin
 # CloudWatch: Monitoring, logging, and alerting tool
 # Cloudtrail: Auditing & Event history tool, account mai kisi user ya service ney kya action liya ushey track krta hai. 
 
+Kinesis Data Streams: Super fast, real time data streaming service. Capacity to catch millions of input and send further without getting crashed
+-> Ingest(Data Pakadna)           -> Stream(Aage Bhejna, Shrad)            -> Buffer(Sambhalna)
+
