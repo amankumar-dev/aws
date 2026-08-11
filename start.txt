@@ -327,3 +327,15 @@ EMR: Elastic Mapreduce, Create cluster of EC2 instances to use distributed engin
 Kinesis Data Streams: Super fast, real time data streaming service. Capacity to catch millions of input and send further without getting crashed
 -> Ingest(Data Pakadna)           -> Stream(Aage Bhejna, Shrad)            -> Buffer(Sambhalna)
 
+Kinesis Producer: Pack data nd send to kinesis data stream, data blob, partition key
+-> AWS SDKs(Boto3/Java/NodeJS)
+-> Kinesis Producer Library(AWS High performance java Library, batch processing)
+-> Kinesis Agent(Lightweight java application which installed in linux which continously check logs and if new logs founded it will automatically push to kinesis)
+-> AWS Service Integrations(Cloudwatch, IoT core, Fluentd)
+
+Kinesis Consumer: Pull live data from stream and perform analysis, processing or storage
+-> AWS Lambda
+-> Kinesis client library(Custom application which we run on our EC2 instances)
+-> Kinesis firehose(Directstorage load pull data from stream and push into storage)
+-> Apache Flink/EMR(Ye services isi kinesis se data ko read krtey hai)
+
