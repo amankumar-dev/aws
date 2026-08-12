@@ -339,3 +339,18 @@ Kinesis Consumer: Pull live data from stream and perform analysis, processing or
 -> Kinesis firehose(Directstorage load pull data from stream and push into storage)
 -> Apache Flink/EMR(Ye services isi kinesis se data ko read krtey hai)
 
+Amazon MSK: Manage streaming for Apache Kafka, allow to do setup, run and scale apache kafka clusters on AWS cloud.
+-> Producers: Jo data kafka me bhejte hai
+-> Topics & Partitions: Kinesis shards key trah, data organize in topic, piece of that topic known as partiton which handle throughput and ordering
+-> Brokers: Apache kafka ke servers, MSK manage those Brokers
+-> Consumer: Jo data read krke process krta hai
+
+Amazon Opensearch: Tool which use to search, Analytics and log monitoring, pehle naam elasticsearch tha , full text search engine, log analytics & monitoring
+
+Amazon Quick suite: Agentic AI powerd enterprise workspace
+-> Amazon Quicksight: Data visualization & Big
+-> Amazon Quick research: Deep Analysis
+-> Amazon Quick Flow: Workflow Automation
+-> Amazon Quick Autmate: Process opitmization and Actions
+-> Amazon Quick index: Data Discovery.
+
