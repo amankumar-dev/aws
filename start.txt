@@ -354,3 +354,33 @@ Amazon Quick suite: Agentic AI powerd enterprise workspace
 -> Amazon Quick Autmate: Process opitmization and Actions
 -> Amazon Quick index: Data Discovery.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--APPLICATION INTEGRATIONS--
+
+SQS: Simple Queue Service, Message queuing service, do ya ushsey jayda app ke beech me async communication krwata hai
+-> Decoupling: Seperate consumer and produceer direct link and filt itself in between which allow to consumer to process data as per its speed so app not get crashed.
+-> Rate limiting & Buffer: Work like a breaker so help to prevent data loss
+-> Poisioning Message Handling: Dead Letter Queue, Those msgs which crashed application send them to error handling queue to fix
+
+SNS: Simple Notification Service, Messaging service hai, Notification dena jinn jinn ney subscribe kr rakkha hoga
+-> Publisher: Sender, Jo SNS ko message bheta hai
+-> Topic: Logical access point, grouping zone hota hai jaha message aatey hai 
+-> Subscriber: Jo topic se judey huai hai jaise hi topic mai naye message aata hai SNS sb subscriber ko instantly push kr deta hai
+
+SNS SQS Fan out: Services bs 1 message SNS topic pr publish karegi SNS ushey 3 alg alg SQS Queue mai fan out (copy) kr dega. 
+
+AWS Step Function: Visual workflow Orchestrator(State Machine) service, Alag alag aws services ko aapas mai connect krke ek multi step automated besiness worflow(pipline) bnana.
+-> State Machine: Amazon State Language, Workflow step function ka ek JSON based structure me define hota hai jishey state mahine kehte hai.
+-> Types of state: Task State(Lambda run), Choice State(If/Else), Parallel State, Map State(array per loop), Wait State(Timeout Interval), Fail/success state.
+-> Built in Error Handling & Retries: if step fail, automatically retry or send to specific catch/fallback block me bhej deta hai
+
+Amazon Appflow: Fully managed integration service (SaaS Connector), SaaS app ko AWS services ke beech mai data securly move or sync krna bina koi custom code aur API integration likhey
+
+Amazon EventBridge: Serverless event bus, central hub jo saarey events ko ek jagah recieve krta hai rule apply and then send to services to work on that data.
+-> Event source(Kahan se aa raha hai)                         -> Rules(Filtering & Routing logic)
+-> Event Bus(Router)                                          -> Targets(kahan bhejna hai)
+
+Amazon MWAA: Managed workflow for Apache Airflow, managed service which allow to run open source Apache Airflow and provide environment, infra, and security.
+
+
