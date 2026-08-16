@@ -383,4 +383,41 @@ Amazon EventBridge: Serverless event bus, central hub jo saarey events ko ek jag
 
 Amazon MWAA: Managed workflow for Apache Airflow, managed service which allow to run open source Apache Airflow and provide environment, infra, and security.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--SECURITY--
+
+IAM: Identify and Access Mgmt, Allow what to whom
+-> IAM Users: Account for single individual person, password, access keys
+-> IAm Group: Ek group bnana aur need ke hisaab se group ko access de dena
+-> IAM Role: Ek temp access so taht keys ko hard coded nhi krna padey code mai
+-> IAM Policy: A JSON/Document jo define krta kya kiska allowed hai
+
+IAM MFA: Multi Factor Authentication, We can do enforce MFA i.e. user not able to do anything if MFA disabled
+-> Virtual MFA Device: MS Authenticator, harr 30 sec mai ek 6 digit code deta hai
+-> FIDO Certified Security keys: Yubikey
+-> Hardware ToTP Tokens: Physical keychain jishke screen pr 6 digit code dikhta rehta hai
+
+AWS KMS: Key mgmt service, which create,store,manage and control your encryption key
+-> Envelope Encryption: Pehla ek temp key data hai for encrypt aur use hoke destroy ho jata hai fir ek aur key deta hai jo already encrypted hota hai jishka uswe krney ke liye KMS access check krta hai pehle
+-> Owned keys: Services ke dwara default use honey waali key
+-> AWS Managed Keys: AWS create on our behalf but we can't modify it
+-> Custom Managed Keys: We create we control
+
+Amazon Macie: Fully managed data secruityand data primary service jo ML aur pattern matching kr use krke s3 mai sensetive data ko aurtomatically protect krti hain
+
+AWS Secret Manager: Secure storage service which save and manage DB password, OAuth, API Keys Centralized and Encrypted storage, Automatic secret rotation, IAM policeds
+
+AWS WAF: Web Application Firewall, protect website from malicious web traffic, filter all http/https request and analysis
+-> Web ACL: Web Access Control List, Container/profile of WAF
+-> Rules & Rule Groups: Tay krtey hai ki request ko allow, block ya log krna hai
+-> Resources: Ye server pr nhi lgta balki AWSkey inn services pr lgta hai, ALB, CDN, API Gateways, AppSync, App runner services.
+
+AWS Sheild: Prevent DDoS Attack
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--NETWORK--
+
+
 
