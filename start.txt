@@ -419,5 +419,37 @@ AWS Sheild: Prevent DDoS Attack
 
 --NETWORK--
 
+VPC: GBN key physical layer-2/layer-3 hardware key upar chlta hua software defined Virtual Network (SDN) which give isolate layer-3 IP subnetting environment deta hai 
+
+Subnets: VPC key under ka IP address mgmt system, VPC 10.0.0.0/16 (total 65,536 IPs), subnet 10.0.1.0/24 (total 256 IPs), Each subnet has atatched route table which decide IP get Internet access or not.
+-> Public Subnets: 0.0.0.0/0 (Internet Gateways) Ishme jo bhi EC2 bnaya ushko ek public IP milege aur woh direct Internet se connect ho sakta hai
+-> Private Subnets: Internet ka direct route blocked (sirf internal VPC traffic allowed), Servers ko sirf private IP (10.0.2.x) milti hai, Outside interne t se koi ishko directly ping/access block
+
+Internet Gateways: Component of VPC which connect VPC to public internet, AWS fully managed software defined service layer hai
+
+NAT Gateway: To connect internet with Private IPs
+
+NACL: Network Access Control LIst, Subnet level virtual FW, Control traffic of in and out.
+
+Security Groups: Instance level virtual FW, Resources mai inbound and outbount control
+
+VPC Flow logs: VPC key under IP traffic (NW packets) ka metadata record capture krta hai
+
+VPC peering: Networking Connection which allow routing between tow VPCs via private IP addresses, Network to network
+
+AWS PrivateLink: It's technology used by VPC endpoints, that enables you to privately connect your VPC to aws services and does not leave AWS network, Service to servbice
+
+VPC endpoints: AWS feature which allow to connect privately with any AWS services or third party services without going in public internet
+
+DNS: Domain Name System, DNS Recursive Resolver (Router/ISP) -> Root name server (.) -> TLD name Server (.com) -> Authorative Name Server (example=10.21.93.4)
+
+Amazon Route 53: AWS ki highly scalable DNS web service hai, Route 53 because work on TCP/UDP port 53, Route user traffic to internet application.
+-> Domain Name Registration: Domain Khareedna
+-> DNS Mgmt/Traffic Routing: Domain name ko IP address se connect krna.
+-> Health Checking: When primary serverdown then traffic automatically redirect to backup server
+
+Amazon Cloudfront: AWS fast CDN (Content Delivery Network) service hai, Main kaam website ke content ko high speed mai deliver krna
+-> Edge Location            -> Caching Mechanism
+-> Origin
 
 
