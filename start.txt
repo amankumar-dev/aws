@@ -452,4 +452,48 @@ Amazon Cloudfront: AWS fast CDN (Content Delivery Network) service hai, Main kaa
 -> Edge Location            -> Caching Mechanism
 -> Origin
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--MANAGEMENT AND GOVERNANCE--
+
+Cloudwatch Metrics: AWS Primary montioring and observability tool hai, AWS resources ke performance data aur numbers ko track aur graph key form mai represent krta hai
+-> Namespace: Category ya container (AWS/EC2, AWS/S3)
+-> Metric Name: Specific variable jo track ho raha hai (Cpuutilization, MemoryUsage)
+-> Dimensions: Data ko isolate krney key liye (Instance Id=i-1234567890)
+-> Timestamp & Unit: Kis exact time pr kitni value mili (Bytes, Seconds, Percent, Count)
+
+Cloudwatch Logs: AWS centralized loggin service, application servers aur AWS services key text logs (Activity History/Error Messages) ko collect, monitor aur store
+-> Log Event: Ek single log message(Timestamp + Message text)
+-> Log stream: Ek single source/instance se aaney waaley log events ka group
+-> Log group: Same application ya service ke saarey log streams ka collection
+
+Unified Agent Logs: Single agent for system metrics + Application logs, install on EC2 and on premises servers pr install hota hai
+
+Cloudwatch Alarms: Automated notification aur action system jo metrics ko continously watch krta hai, Jb bhi ek specific threshold(limit) ko cress krti hai, to alarm trigger krtaq 
+-> OK       -> Alarms     -> INSUFFICIENT_DATA
+
+Cloudtrail: Apke AWS account me kisne, kya, kb aur kahan se kia, Auditing & Security logs, Record all API Call and user Activity
+-> Mgmt Events(Control Plane): Naya EC2, Subnet create, delete s3 bucket
+-> Data Events(Data Plane): S3 bucket object upload/download, lambda function invoke
+-> Cloudtrail insights: AI based feature jo abnormal activity detect krti hai
+-> Trails: By default it store 90 days log but to save prior that need to create trail which store older than 90 days in the form of JSON in S3 bucket.
+
+AWS Config: Compliance, Governance and resource mgmt service, Resource ka config status and history kya hai aur kya wo security rules ko follow krta hai
+-> configuration history & timeline: configuration badlaav ka poora timeline maintain krta hai
+-> Resource Relationship: Btata hai ek resource dusrey se kaise juda hai
+-> AWS Config ruls: Check setup secure or not
+-> Auto remediation: Non compliant resource ko compliant kr deta hai
+
+AWS Cloudformation: Infrastructure as Code (IaC), we don't have to create all EC2 and other services manually instead we just pass JSON or YAML then cloudformation create itself.
+-> Tempelate: JSON or YAML file we define what resource and what it's config needed
+-> Stack: Group of ready made resources in AWS after template uploadation
+-> Change Sets: Shows dry run before applying any changes on Infrastructure
+
+SSM Parameter Store: Digital Vault(Secrets aur configs ko cloud mai safe rakhna)
+-> String(Plain text)       -> Stringlist(Comma seprated values)          -> Securestring(Encrypted secret data)
+
+AWS well archtectured Tool: WA tool humse sawal krta hai kya config hai sb aur ush basisi pr jo sahi recommendation ho wo de deta hai
+
+AWS managed Grafana: Based on open source tool grafana, central dashboard tool jahan aurs services as well as non aws service ko bhi ek single graph view mai dekh saktey hai. 
+
 
