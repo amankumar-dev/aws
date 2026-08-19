@@ -496,4 +496,28 @@ AWS well archtectured Tool: WA tool humse sawal krta hai kya config hai sb aur u
 
 AWS managed Grafana: Based on open source tool grafana, central dashboard tool jahan aurs services as well as non aws service ko bhi ek single graph view mai dekh saktey hai. 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--MACHINE LEARNING--
+
+SageMaker: End to end ML aur Generative AI platform service hai, ML model bnaney se lekr ushey train krwaney aur production me deploy kareny ke source kaam ek hi place pr krney ke key liye sagemaker use hota hai
+Data Preparation -> Model Building -> Training & Tuining -> Deployment & Hosting
+
+Sagemaker Feature Store: Koi raw data ko scenario based clean processed karna aur ushko result feature hota hai aur wohi two types ke store me hota hai 
+-> Online Store(DynamoDB): Real time data fetch for file prediction
+-> Offline Store(S3): Kaafi tym baad data use krna jb naya AI model train krna ho
+
+Sagemaker ML Lineage Tracking: Sb kuch track krna kaha se data aaya, konsi script chli (code), production me kisney deploy kia, Lineage Query
+
+Sagemaker Ground Truth: High quality data labelling tool, raw datas(Photos, Text, Audio) me Tags/Answers laganey ka kaam krta hai taaki apka AI model accurate training le sake.
+
+Sagemaker Data Wrangler: Data clean aur prepare krney ka sbsey asaan visual tool hai, drag and drop
+-> Multiple source se Data import krna
+-> Data insights and Quality report
+-> 300+ Pre built transformation (No Code needed)
+
+Sagemaker Canvas: Visual< No code machine learning aur Generative AI service hai, Direct uplaod excel/csv and system will automatically predict result of your scenarios
+-> Tabular Prediction                     -> Generative AI & LLMs
+-> Image & Text Classification
+
 
