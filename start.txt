@@ -520,4 +520,14 @@ Sagemaker Canvas: Visual< No code machine learning aur Generative AI service hai
 -> Tabular Prediction                     -> Generative AI & LLMs
 -> Image & Text Classification
 
+Amazon Bedrock: Fully managed generative AI service, Powerful foundation models(Claude, Llama, Mistral, Amazon Titan) single API key jariye ready made miltey hai
+-> Multiple Foundation Models via single API
+-> Private & Secure
+-> Pay as you go
+
+RAG: AI technique jo Gen AI models ko aapke private data ya document se padhkar jawab dene me help krti hai, create kr saktey hai amazon bedrock knowledge bases, Sagemaker + Opensearch
+-> Retrieval(Dhoondhna): Search related info after searching DB/S3
+-> Augment(Jodna): Relevant info ko question ke saath mila kr AI model ke pass bhejna
+-> Generation(Jawab bnana): AI model context pdhkr sahi aur accurate jawab format krke deta hai
+
 
