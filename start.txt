@@ -536,4 +536,28 @@ Amazon Q Apps: Q Business ke dwara bnaya gaya ek app jo repetative task liye bna
 
 Amazon Kendra: AWS ka private search engine google key trah, keyword/semantic search , documents ke link, location
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--DEVELOPER TOOLS--
+
+AWS Access Keys: AWS me kisi bhi account ko programtically access krney ke liye 2 chije milti H
+-> Access ke ID: Username/Account ID
+-> Secret Access Key: Jaise password/secret key
+
+AWS CLI: Command Line Interface, Tool that enables you to interact with AWS services using commands in your command line shell
+
+AWS SDK: Software development kit, Language specific API, Allow to manage AWS services programtically, Just like Boto3 in python
+
+AWS CDK: Cloud development kit, open source framework hai jishey ap apne favourite programming language me code likhkr AWS infrastructure create aur manage kr saktey hai
+-> Code: Python me code likkha
+-> Synth (CDK Synth): CDK python code ko convert krke AWS cloudformation tempelate bna deta h
+-> Deploy (CDK Deploy): Cloudformation ush tempelate ko read krke actual resource create krta h
+
+CodeDeploy: Naye code ko bina server down krey bina puraney code se replace kr deta hai
+Code uthata h -> Server pr bhejta h -> Scripts chlta h
+
+CodeBuild: Source code ko compile krta h, Test run krta h, aur deployable artifact produce krta H
+
+Codepipeline: CI/CD automation manager, git push krney se lekr live production server tk code phochane ke saarey steps build,text,deploy ko automatic chla deta H
+
 
