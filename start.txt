@@ -530,4 +530,10 @@ RAG: AI technique jo Gen AI models ko aapke private data ya document se padhkar 
 -> Augment(Jodna): Relevant info ko question ke saath mila kr AI model ke pass bhejna
 -> Generation(Jawab bnana): AI model context pdhkr sahi aur accurate jawab format krke deta hai
 
+Amazon Q Business: AWS fully managed, enterprise ready AI assistant, company key internal files, stack msgs, sharepoint docs, aur db ko pdhkar employees ke sawalon ke sahi aur accurate jawab dene wala private aI assistant hai, AI Chatbots
+
+Amazon Q Apps: Q Business ke dwara bnaya gaya ek app jo repetative task liye bnaya jata hai
+
+Amazon Kendra: AWS ka private search engine google key trah, keyword/semantic search , documents ke link, location
+
 
